@@ -1,0 +1,28 @@
+    * Confirmed Savannah bug #37114 (mountpoint does not detect
+    mount points using --bind on same file system) still exists,
+    but fixed in Debian and Red Hat. 
+    Considering this bug closed since distributions are using
+    util-linux's mountpoint program and ours is no longer
+    built/used by default.
+    Considered importing util-linux mountpoint but that would duplicate
+    effort and pull in a new dependency on libmount.
+
+
+    * Problem with pidof breaks after prelink (Savannah bug #34992)
+    fixed. Patch supplied by Dave Dykstra.
+
+    * Patch to automatically spawn agetty on kernel consoles
+    The feature is useful for developers and admins that occasionally need
+    to boot with e.g. console=ttyS0.
+    The built in default can be overridden via inittab for each device. An
+    entry like "S0::off:" turns off the getty on ttyS0.
+
+    * Imported patches from Arch Linux's bootlogd to avoid special
+    characters in log file. Also makes parsing easier.
+    This should close Savannah bug report 36528.
+    http://savannah.nongnu.org/bugs/?36528
+
+    * Applied patches provided in Savannah bug report 49991. Fix tabs in
+    bootlogd and avoid printing unitialized "buf" variable when
+    consolename() fails.
+
