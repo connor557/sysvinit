@@ -1,3 +1,13 @@
+    * The pidof command used to discover the correct PID of
+    a process even if the wrong path was given. For example
+    pidof /wrongpath/sleep would find the PID of a command run as "sleep".
+    This bug was reported on Launchpad for Ubuntu and on Savannah.
+    https://bugs.launchpad.net/ubuntu/+source/sysvinit/+bug/1546126
+    http://savannah.nongnu.org/bugs/?47196
+    This bug appears to have been fixed in the development branch,
+    allowing these bugs to be tested/closed.
+
+
     * Confirmed Savannah bug #37114 (mountpoint does not detect
     mount points using --bind on same file system) still exists,
     but fixed in Debian and Red Hat. 
