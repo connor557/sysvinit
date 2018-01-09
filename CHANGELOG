@@ -1,3 +1,23 @@
+    * Dropping Debian patch to use /run/nologin instead of /etc/nologin in paths.h.
+    Seems every distribution uses a different location. Oracle uses /etc/nologin,
+    CentOS seems to use /var/run/nologin.
+    We will use /etc/nologin and let distros patch to suit their own preference.
+
+    * Updated halt.8 man page with corrections from
+    Christoph Anton Mitterer.
+
+    * Confirme we have applied patch from Bjarni Ingi Gislason
+    which fixes typo in fstab-decode man page.
+
+    * Applied Debian patch to allow init to build on GNU Hurd.
+    (Credit: Roger Leigh)
+
+    * Confirmed we have Debian patch from developer Johannes Truschnigg
+    which informs the user of field size limit.
+
+    * Applied patch from Debian to the init manual page (init.8)
+    to better address runlevels. (Author unknown)
+
     * The pidof command used to discover the correct PID of
     a process even if the wrong path was given. For example
     pidof /wrongpath/sleep would find the PID of a command run as "sleep".
