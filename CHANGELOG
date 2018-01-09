@@ -1,3 +1,21 @@
+    * Confirmed we have Debian patch to fix enabling SELinux.
+    (Credit to Petter Reinholdtsen)
+
+    * Confirmed we have Debian patch to make sure utf-8 flag is not cleared from tty.
+    (Credit to Samuel Thibault)
+
+    * Confirmed we have Roger Leigh's Makefile patch to allow building
+    with multiarch libcrypt.
+
+    * Applied Justus Winter's symlink patch to make sure killall5
+    builds and runs on Hurd.
+
+    * Confirmed we have Werner Fink's PATH_MAX patch for getting
+    killall5 to build on Hurd.
+
+    * Made sure we have Petter Reinholdtsen's patch to init.c which
+    allows init to build on GNU/kFreeBSD despite missing VSWTC.
+
     * Dropping Debian patch to use /run/nologin instead of /etc/nologin in paths.h.
     Seems every distribution uses a different location. Oracle uses /etc/nologin,
     CentOS seems to use /var/run/nologin.
