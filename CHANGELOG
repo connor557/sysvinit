@@ -1,3 +1,11 @@
+    * Allow multiple console output
+    When booting a kernel with multiple serial console support, or multuiple
+    console arguments ala "console=tty1 console=ttyS0,9600" the kernel will output
+    messages to all consoles, init however will not. It will only send output to,
+    and accept input from, the last of the consoles.
+    This patch fixes it.
+    (Patch provided by Martin Buck.)
+
     * Added Patch from Debian developer Mats Erik Andersson to make
     ioctl work on GNU/kFreeBSD. Patches bootlogd.
 
