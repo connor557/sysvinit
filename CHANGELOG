@@ -1,3 +1,9 @@
+    * Added Patch from Debian developer Mats Erik Andersson to make
+    ioctl work on GNU/kFreeBSD. Patches bootlogd.
+
+    * Added Robert Millan's Debian patch to set TERM variable to xterm (instead
+    of cons25) when running on GNU/kFreeBSD.
+
     * Added Robert Millan's Debian patch to use /run/initctl as the named
     pipe for communicating. This works around a limitation on the kFreeBSD
     branch which prevents us from using /dev/initctl for pipes.
