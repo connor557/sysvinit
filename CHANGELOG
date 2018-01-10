@@ -1,3 +1,10 @@
+    * Added Robert Millan's Debian patch to use /run/initctl as the named
+    pipe for communicating. This works around a limitation on the kFreeBSD
+    branch which prevents us from using /dev/initctl for pipes.
+
+    * Confirmed we have applied Guillem Jover's patch to make
+    ifdown work on FreeBSD.
+
     * Confirmed we have Debian patch to fix enabling SELinux.
     (Credit to Petter Reinholdtsen)
 
